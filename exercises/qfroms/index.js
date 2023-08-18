@@ -12,8 +12,16 @@
 //     q.remove(); // returns 1
 //     q.remove(); // returns 2
 
-const Stack = require('./stack');
+const Stack = require("./stack");
 
-class Queue {}
+class Queue {
+  constructor() {
+    this.first = new Stack();
+    this.second = new Stack();
+  }
+  add(record) {
+    this.first.push(record);
+  }
+}
 
 module.exports = Queue;
