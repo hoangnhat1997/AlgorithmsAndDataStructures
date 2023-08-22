@@ -13,8 +13,9 @@ class LinkedList {
   constructor() {
     this.head = null;
   }
+  insertFirst(data) {
+    this.head = new Node(data, this.head);
+  }
 }
-const list = new LinkedList();
-list.head = new Node(10);
 
 module.exports = { Node, LinkedList };
